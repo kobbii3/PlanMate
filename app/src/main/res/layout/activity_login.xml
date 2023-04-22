@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_color"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textColor="@color/darkpurple"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/shape_button"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/usuario"
+            android:inputType="textPersonName"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/darkpurple"
+            android:textColorHint="@color/gray"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/et_contraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/shape_button"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/contrase_a"
+            android:inputType="textPersonName"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/darkpurple"
+            android:textColorHint="@color/gray"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/bt_iniciosesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/shape_button"
+            android:backgroundTint="@color/green"
+            android:text="@string/iniciar_sesi_n"
+            android:textColor="@color/darkpurple" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

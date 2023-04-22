@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MateriaDetallesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_button"
+        android:backgroundTint="@color/darkpurple"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/darkpurple"
+            app:srcCompat="@android:drawable/btn_dialog" />
+
+        <TextView
+            android:id="@+id/tv_comentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/shape_button"
+            android:backgroundTint="@color/pastelpurple"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:text="@string/nombre_materia"
+            android:textColor="@color/darkpurple"
+            android:textColorHint="@color/darkpurple"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_comentario_detalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/shape_button"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:text="@string/nombre_profesor"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/darkpurple"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_correo_profesor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/shape_button"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:text="@string/correo_profesor"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/darkpurple"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_nrc_clase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/shape_button"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:text="@string/nrc_clase"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/darkpurple"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
