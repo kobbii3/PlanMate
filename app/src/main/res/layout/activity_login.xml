@@ -70,6 +70,7 @@
             android:layout_marginRight="80dp"
             android:background="@drawable/shape_button"
             android:backgroundTint="@color/green"
+            android:onClick="InicioSesion"
             android:text="@string/iniciar_sesi_n"
             android:textColor="@color/darkpurple" />
     </LinearLayout>

@@ -101,6 +101,7 @@
                 android:background="@drawable/shape_button"
                 android:backgroundTint="@color/green"
                 android:gravity="center"
+                android:onClick="MateriaEmergente"
                 android:text="MATERIA"
                 android:textColor="@color/darkpurple"
                 android:textSize="20sp"
@@ -116,6 +117,7 @@
                 android:background="@drawable/shape_button"
                 android:backgroundTint="@color/green"
                 android:gravity="center"
+                android:onClick="ComentarioEmergente"
                 android:text="COMENTARIOS"
                 android:textColor="@color/darkpurple"
                 android:textSize="20sp"
@@ -129,6 +131,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="80dp"
                 android:backgroundTint="@color/darkpurple"
+                android:onClick="EditarTarea"
                 android:padding="15dp"
                 android:text="@string/editar_tarea"
                 android:textColor="@color/white"
@@ -158,6 +161,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/shape_button"
                 android:backgroundTint="@color/pastelpurple"
+                android:onClick="AtrasDetalleTareas"
                 app:cornerRadius="20dp"
                 app:srcCompat="@android:drawable/ic_menu_revert" />
 

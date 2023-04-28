@@ -21,6 +21,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:background="@color/darkpurple"
+            android:onClick="AtrasMateriaDetalle"
             app:srcCompat="@android:drawable/btn_dialog" />
 
         <TextView

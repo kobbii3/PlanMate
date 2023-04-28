@@ -173,6 +173,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/shape_button"
                 android:backgroundTint="@color/pastelpurple"
+                android:onClick="AtrasCrearTarea"
                 app:cornerRadius="20dp"
                 app:srcCompat="@android:drawable/ic_menu_revert" />
         </LinearLayout>
