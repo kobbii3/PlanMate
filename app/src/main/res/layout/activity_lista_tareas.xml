@@ -4,147 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListaTareasActivity">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <Button
+            android:id="@+id/bt_tarea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/shape_button"
+            android:backgroundTint="@color/green"
+            android:padding="20dp"
+            android:text="@string/tarea_t_tulo"
+            android:textColor="@color/darkpurple"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_nombreusuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/usuario"
-                android:textColor="@color/gray"
-                android:textSize="34sp" />
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                app:srcCompat="@android:drawable/ic_menu_set_as" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bg_color"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/bt_tarea"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="70dp"
-                android:background="@drawable/shape_button"
-                android:backgroundTint="@color/green"
-                android:onClick="DetallesTarea"
-                android:padding="20dp"
-                android:text="@string/tarea_t_tulo"
-                android:textColor="@color/darkpurple"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/bt_tarea1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="70dp"
-                android:background="@drawable/shape_button"
-                android:backgroundTint="@color/green"
-                android:padding="20dp"
-                android:text="@string/tarea_t_tulo"
-                android:textColor="@color/darkpurple"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/bt_vertareas4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="70dp"
-                android:background="@drawable/shape_button"
-                android:backgroundTint="@color/green"
-                android:padding="20dp"
-                android:text="@string/tarea_t_tulo"
-                android:textColor="@color/darkpurple"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/bt_vertareas5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="70dp"
-                android:background="@drawable/shape_button"
-                android:backgroundTint="@color/green"
-                android:padding="20dp"
-                android:text="@string/tarea_t_tulo"
-                android:textColor="@color/darkpurple"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/bt_vertareas6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="70dp"
-                android:background="@drawable/shape_button"
-                android:backgroundTint="@color/green"
-                android:padding="20dp"
-                android:text="@string/tarea_t_tulo"
-                android:textColor="@color/darkpurple"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/bt_vertareas7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="70dp"
-                android:background="@drawable/shape_button"
-                android:backgroundTint="@color/green"
-                android:padding="20dp"
-                android:text="@string/tarea_t_tulo"
-                android:textColor="@color/darkpurple"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="350dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/shape_button"
-                android:backgroundTint="@color/pastelpurple"
-                android:onClick="AtrasListaTareas"
-                app:cornerRadius="20dp"
-                app:srcCompat="@android:drawable/ic_menu_revert" />
-        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
