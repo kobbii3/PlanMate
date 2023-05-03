@@ -44,7 +44,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/et_titulo_materia"
+                android:id="@+id/et_titulo_tarea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -63,7 +63,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/et_profesor"
+                android:id="@+id/et_nombre_profesor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -81,7 +81,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/et_correo"
+                android:id="@+id/et_materia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -99,7 +99,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/et_nrc"
+                android:id="@+id/et_fecha_entrega"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -117,7 +117,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btn_guardar_materia"
+                android:id="@+id/btn_guardar_tarea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"

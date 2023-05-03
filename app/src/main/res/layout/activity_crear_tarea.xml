@@ -44,7 +44,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/et_titulo_materia"
+                android:id="@+id/et_titulo_tarea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -63,7 +63,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/et_nombre_profesor"
+                android:id="@+id/et_detalles"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
                 android:layout_marginLeft="60dp"
@@ -80,7 +80,7 @@
                 android:textStyle="bold" />
 
             <AutoCompleteTextView
-                android:id="@+id/actv_categoria"
+                android:id="@+id/et_categoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -97,7 +97,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/et_correo"
+                android:id="@+id/et_materia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -115,7 +115,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/et_profesor"
+                android:id="@+id/et_nombre_profesor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -133,7 +133,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/et_nrc"
+                android:id="@+id/et_fecha_entrega"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -151,13 +151,14 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btn_guardar_materia"
+                android:id="@+id/btn_guardar_tarea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="80dp"
                 android:backgroundTint="@color/darkpurple"
+                android:onClick="clickGuardarTarea"
                 android:padding="15dp"
                 android:text="@string/guardar_tarea"
                 android:textColor="@color/white"

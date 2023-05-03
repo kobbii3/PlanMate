@@ -15,14 +15,13 @@ public class AdaptadorPersonalizado extends RecyclerView.Adapter<AdaptadorPerson
     private ArrayList<Tarea> listadoInformacion;
     private OnItemClickListener onItemClickListener;
 
-    public void setListadoInformacion(ArrayList<Tarea> listadoInformacion) {
-        this.listadoInformacion = listadoInformacion;
-        notifyDataSetChanged();
-    }
-
     public AdaptadorPersonalizado(ArrayList<Tarea> listadoInformacion) {
         this.listadoInformacion = listadoInformacion;
         this.onItemClickListener = null;
+    }
+    public void setListadoInformacion(ArrayList<Tarea> listadoInformacion) {
+        this.listadoInformacion = listadoInformacion;
+        notifyDataSetChanged();
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
@@ -59,10 +58,20 @@ public class AdaptadorPersonalizado extends RecyclerView.Adapter<AdaptadorPerson
 
         public void enlazar(Tarea miTarea){
             btnTituloTarea.setText(miTarea.getTitulo());
+
+            if (onItemClickListener != null){
+                btnTituloTarea.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        onItemClickListener.onItemBtnTituloTarea(miTarea,getAdapterPosition());
+                    }
+                });
+            }
         }
     }
 
     public interface OnItemClickListener{
         void onItemClick(Tarea miTarea, int posicion);
+        void onItemBtnTituloTarea(Tarea miTarea, int posicion);
     }
 }

@@ -16,7 +16,7 @@ public class MenuActivty extends AppCompatActivity {
 
     //metodo boton ver tareas pendientes
     public void VerTareas(View view){
-        Intent vertareas = new Intent(this, ListaTareasActivity.class);
+        Intent vertareas = new Intent(this, MainActivity.class);
         startActivity(vertareas);
     }
 
