@@ -16,17 +16,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tv_nombreusuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/usuario"
-                android:textColor="@color/gray"
-                android:textSize="34sp" />
-
             <ImageButton
                 android:id="@+id/imageButton"
                 android:layout_width="wrap_content"
@@ -86,13 +75,30 @@
                 android:backgroundTint="@color/green"
                 android:gravity="center"
                 android:padding="10dp"
+                android:text="@string/nombre_profesor"
+                android:textColor="@color/darkpurple"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tv_nombre_profesor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:padding="10dp"
                 android:text="@string/categor_a"
                 android:textColor="@color/darkpurple"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/tv_infoprofesor"
+                android:id="@+id/tv_materia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -104,11 +110,11 @@
                 android:onClick="MateriaEmergente"
                 android:text="MATERIA"
                 android:textColor="@color/darkpurple"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/tv_comentarios"
+                android:id="@+id/tv_fecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
@@ -118,13 +124,13 @@
                 android:backgroundTint="@color/green"
                 android:gravity="center"
                 android:onClick="ComentarioEmergente"
-                android:text="COMENTARIOS"
+                android:text="FECHA"
                 android:textColor="@color/darkpurple"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btn_editar"
+                android:id="@+id/btnActualizarTarea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
@@ -153,17 +159,6 @@
                 android:textStyle="bold"
                 app:cornerRadius="20dp" />
 
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="350dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/shape_button"
-                android:backgroundTint="@color/pastelpurple"
-                android:onClick="AtrasDetalleTareas"
-                app:cornerRadius="20dp"
-                app:srcCompat="@android:drawable/ic_menu_revert" />
 
         </LinearLayout>
     </LinearLayout>

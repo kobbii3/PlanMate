@@ -4,10 +4,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.firebase.auth.FirebaseAuth;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,6 +24,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
 
     private ArrayList<Tarea> listaPrincipalTareas = new ArrayList<>();
     private RecyclerView rvListadoTareas;
@@ -30,26 +36,43 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("Tareas Pendientes");
+        View listaTareasView = getLayoutInflater().inflate(R.layout.activity_lista_tareas, null);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button btnTarea = listaTareasView.findViewById(R.id.bt_tarea);
+        mAuth = FirebaseAuth.getInstance();
 
         rvListadoTareas = findViewById(R.id.rv_lista_tareas);
-        miAdaptador = new AdaptadorPersonalizado(listaPrincipalTareas);
-
+        miAdaptador = new AdaptadorPersonalizado(MainActivity.this, listaPrincipalTareas);
+        Tarea tareaSeleccionada = new Tarea();
         miAdaptador.setOnItemClickListener(new AdaptadorPersonalizado.OnItemClickListener() {
             @Override
-            public void onItemClick(Tarea miTarea, int posicion) {
+            public void onItemClick(Tarea tarea, int posicion) {
+
+
                 Intent intent =new Intent(MainActivity.this, DetallesTareaActivity.class);
-                intent.putExtra("tarea",miTarea);
+                intent.putExtra("tarea",tareaSeleccionada);
                 startActivity(intent);
             }
 
             @Override
-            public void onItemBtnTituloTarea(Tarea miTarea, int posicion) {
+            public void onItemBtnTituloTarea(Tarea tarea, int posicion) {
 
             }
         });
 
         rvListadoTareas.setAdapter(miAdaptador);
         rvListadoTareas.setLayoutManager(new LinearLayoutManager(this));
+
+    //    btnTarea.setOnClickListener(new View.OnClickListener() {
+    //        @Override
+    //        public void onClick(View v) {
+    //            Intent intent = new Intent(MainActivity.this, DetallesTareaActivity.class);
+    //            startActivity(intent);
+        //       }
+        //   });
+
+        // Agregar el diseño de lista_tareas al LinearLayout principal de MainActivity
+        //  LinearLayout linearLayout = findViewById(R.id.activity_main.xml); // Reemplaza "layout_principal" con el ID correcto de tu LinearLayout principal
+        //  linearLayout.addView(listaTareasView);
     }
 
     @Override
@@ -58,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         cargarDatosTareas();
     }
+
 
     public void cargarDatosTareas(){
         FirebaseFirestore firestore = FirebaseFirestore.getInstance();
@@ -81,5 +105,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void cerrarSesion(View view) {
+        mAuth.signOut();
+        // Se redirige a una actividad de inicio de sesión.
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_color"
-    tools:context=".LoginActivity">
+    tools:context=".RegistrarActivity">
 
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/tv_login"
@@ -20,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="170dp"
             android:gravity="center"
-            android:text="@string/login"
+            android:text="REGISTRAR"
             android:textColor="@color/darkpurple"
             android:textSize="48sp"
             android:textStyle="bold" />
@@ -61,18 +62,23 @@
             android:textColorHint="@color/gray"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/bt_iniciosesion"
+        <EditText
+            android:id="@+id/contrasenaConfirmacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="80dp"
+            android:layout_marginRight="50dp"
             android:background="@drawable/shape_button"
-            android:backgroundTint="@color/green"
-            android:onClick="iniciarSesion"
-            android:text="@string/iniciar_sesi_n"
-            android:textColor="@color/darkpurple" />
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/contrase_a"
+            android:inputType="textPersonName"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/darkpurple"
+            android:textColorHint="@color/gray"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/bt_iniciosesion2"
@@ -83,8 +89,9 @@
             android:layout_marginRight="80dp"
             android:background="@drawable/shape_button"
             android:backgroundTint="@color/green"
-            android:onClick="RegistroSesion"
+            android:onClick="registrarUsuario"
             android:text="REGISTRARSE"
             android:textColor="@color/darkpurple" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

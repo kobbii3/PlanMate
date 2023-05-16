@@ -15,45 +15,50 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity {
+import org.jetbrains.annotations.NotNull;
+
+public class RegistrarActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+
     private EditText correo;
     private EditText contrasena;
-
+    private EditText contrasenaConfirmacion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        correo = findViewById(R.id.correo);
-        contrasena = findViewById(R.id.contrasena);
+        setContentView(R.layout.activity_registrar);
 
         mAuth = FirebaseAuth.getInstance();
 
+        correo = findViewById(R.id.correo);
+        contrasena = findViewById(R.id.contrasena);
+        contrasenaConfirmacion = findViewById(R.id.contrasenaConfirmacion);
+
     }
 
-    public void onStart(){
+    public void onStart() {
         super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
+        //updateUI(currentUser)
     }
 
 
-    public void iniciarSesion (View view){
+    public void registrarUsuario (View view){
 
-            mAuth.signInWithEmailAndPassword(correo.getText().toString(), contrasena.getText().toString())
+        if(contrasena.getText().toString().equals(contrasenaConfirmacion.getText().toString())){
+                mAuth.createUserWithEmailAndPassword(correo.getText().toString().trim(), contrasena.getText().toString().trim())
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
-                                Toast.makeText(getApplicationContext() , "Autenticacion correcta", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext() , "Usuario creado", Toast.LENGTH_SHORT).show();
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                    Intent i = new Intent(getApplicationContext(), MenuActivty.class);
+                                    Intent i = new Intent(getApplicationContext(), LoginActivity.class);
                                 startActivity(i);
-
-
                                 //updateUI(user)
                             } else {
                                 // If sign in fails, display a message to the user.
@@ -66,27 +71,17 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        }
+        }else{
+            Toast.makeText(this, "las contraseñas no coinciden",Toast.LENGTH_SHORT).show();
+            }
 
 
-
-
-
-
-    //metodo boton inicio sesion
-    public void InicioSesion(View view){
-        Intent iniciosesion = new Intent(this, MenuActivty.class);
-        startActivity(iniciosesion);
     }
 
-
-    //metodo boton registrarse
-    public void RegistroSesion(View view){
-        Intent registrosesion = new Intent(this, RegistrarActivity.class);
-        startActivity(registrosesion);
+    //metodo boton registrarse para ir a iniciar sesion
+    public void RegistroSesionDos(View view){
+        Intent registrosesiondos = new Intent(this, LoginActivity.class);
+        startActivity(registrosesiondos);
     }
-
-
-
 
 }

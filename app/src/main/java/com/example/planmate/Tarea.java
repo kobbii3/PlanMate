@@ -1,5 +1,4 @@
 package com.example.planmate;
-
 import com.google.firebase.firestore.Exclude;
 
 import java.io.Serializable;
@@ -8,14 +7,17 @@ public class Tarea implements Serializable {
     private String titulo;
     private String detalles_tarea;
     private String categoria;
+
+    private String materia;
     private String nombre_profesor;
     private String fecha_entrega;
     private String id;
 
-    public Tarea(String titulo, String detalles_tarea, String categoria, String nombre_profesor, String fecha_entrega) {
+    public Tarea(String titulo, String detalles_tarea, String categoria, String materia, String nombre_profesor, String fecha_entrega) {
         this.titulo = titulo;
         this.detalles_tarea = detalles_tarea;
         this.categoria = categoria;
+        this.materia = materia;
         this.nombre_profesor = nombre_profesor;
         this.fecha_entrega = fecha_entrega;
     }
@@ -23,6 +25,8 @@ public class Tarea implements Serializable {
     public Tarea() {
 
     }
+
+
 
     @Exclude
     public String getId() {
@@ -56,6 +60,14 @@ public class Tarea implements Serializable {
         this.categoria = categoria;
     }
 
+    public String getMateria() {
+        return materia;
+    }
+
+    public void setMateria(String materia) {
+        this.materia = materia;
+    }
+
     public String getNombre_profesor() {
         return nombre_profesor;
     }
@@ -71,4 +83,6 @@ public class Tarea implements Serializable {
     public void setFecha_entrega(String fecha_entrega) {
         this.fecha_entrega = fecha_entrega;
     }
+
+
 }

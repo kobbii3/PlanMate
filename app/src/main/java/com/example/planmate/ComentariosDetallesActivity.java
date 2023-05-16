@@ -12,6 +12,7 @@ public class ComentariosDetallesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comentarios_detalles);
+
     }
 
     //metodo boton de dar atras en layout Comentarios Detalle

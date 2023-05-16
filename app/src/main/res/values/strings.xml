@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PlanMate</string>
     <string name="login">LOGIN</string>
-    <string name="usuario">Usuario</string>
+    <string name="usuario">Correo</string>
     <string name="contrase_a">Contraseña</string>
     <string name="iniciar_sesi_n">Iniciar Sesión</string>
     <string name="ver_tareas_pendientes">Ver Tareas Pendientes</string>
@@ -21,4 +21,9 @@
     <string name="correo_profesor">CORREO PROFESOR</string>
     <string name="nrc_clase">NRC CLASE</string>
     <string name="comentario">COMENTARIO</string>
+    <string-array name="categorias">
+        <item>Facil</item>
+        <item>Medio</item>
+        <item>Dificil</item>
+    </string-array>
 </resources>
